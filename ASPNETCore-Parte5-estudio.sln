@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item00 - O Projeto Inicial", "Item00 - O Projeto Inicial", "{F27E3D4C-1B88-402F-AAE3-BF748893E5C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "antes", "antes", "{2F2F89E2-CFC6-4EF5-AE9C-05C8CD83B583}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "depois", "depois", "{CC13E489-513D-4155-915C-C70EFF9145A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasaDoCodigo.MVC", "antes\Item00\CasaDoCodigo\CasaDoCodigo.MVC.csproj", "{D0A5009F-F25C-4373-9685-1E952247E68C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0A5009F-F25C-4373-9685-1E952247E68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A5009F-F25C-4373-9685-1E952247E68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A5009F-F25C-4373-9685-1E952247E68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A5009F-F25C-4373-9685-1E952247E68C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F27E3D4C-1B88-402F-AAE3-BF748893E5C2} = {2F2F89E2-CFC6-4EF5-AE9C-05C8CD83B583}
+		{D0A5009F-F25C-4373-9685-1E952247E68C} = {F27E3D4C-1B88-402F-AAE3-BF748893E5C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {398437CA-EB7F-4F16-ACEE-7A7D1534AD08}
+	EndGlobalSection
+EndGlobal
