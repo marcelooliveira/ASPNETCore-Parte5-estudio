@@ -36,6 +36,13 @@
 
   <ItemGroup>
     <Content Include="..\..\..\_Recursos\produtos\livros.txt" Link="wwwroot\images\produtos\livros.txt" />
+    <Content Include="Areas\Catalogo\Views\Home\Index.cshtml" />
+    <Content Include="Areas\_ViewImports.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Areas\_ViewStart.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -54,7 +61,6 @@
   <ItemGroup>
     <Folder Include="Areas\Catalogo\Data\" />
     <Folder Include="Areas\Catalogo\Models\" />
-    <Folder Include="Areas\Catalogo\Views\" />
     <Folder Include="wwwroot\images\produtos\" />
   </ItemGroup>
 
