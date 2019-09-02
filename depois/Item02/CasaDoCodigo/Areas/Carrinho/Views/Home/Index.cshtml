@@ -6,21 +6,9 @@
 
 <h3>Meu Carrinho</h3>
 
-<form method="post" asp-area="carrinho" asp-controller="home" asp-action="index">
-</form>
+<form method="post" asp-area="carrinho" asp-controller="home" asp-action="index"></form>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="pull-right">
-            <a class="btn btn-success" href="/">
-                Adicionar Produtos
-            </a>
-            <a class="btn btn-success" asp-area="cadastro">
-                Preencher Cadastro
-            </a>
-        </div>
-    </div>
-</div>
+<partial name="_NavegacaoCarrinho"/>
 <br />
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -97,21 +85,10 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="pull-right">
-            <a class="btn btn-success" href="/">
-                Adicionar Produtos
-            </a>
-            <a class="btn btn-success" asp-area="cadastro">
-                Preencher Cadastro
-            </a>
-        </div>
-    </div>
-</div>
+<partial name="_NavegacaoCarrinho" />
 
 @section Scripts
-{
+    {
     <script src="~/js/carrinho.js">
 
     </script>
