@@ -26,7 +26,9 @@
     <Compile Include="Areas\Cadastro\Controllers\HomeController.cs" />
     <Compile Include="Areas\Carrinho\Controllers\HomeController.cs" />
     <Compile Include="Areas\Catalogo\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Catalogo\Models\ViewModels\CarrosselViewModel.cs" />
     <Compile Include="Areas\Catalogo\Models\ViewModels\CategoriasViewModel.cs" />
+    <Compile Include="Areas\Catalogo\ViewComponents\CarrosselViewComponent.cs" />
     <Compile Include="Areas\Catalogo\ViewComponents\CategoriasViewComponent.cs" />
     <Compile Include="Areas\Identity\Data\AppIdentityContext.cs" />
     <Compile Include="Areas\Identity\Data\AppIdentityUser.cs" />
@@ -79,6 +81,7 @@
     <None Include="Areas\Cadastro\Views\Home\_NavegacaoCadastro.cshtml" />
     <None Include="Areas\Carrinho\Views\Home\Index.cshtml" />
     <None Include="Areas\Carrinho\Views\Home\_NavegacaoCarrinho.cshtml" />
+    <None Include="Areas\Catalogo\Views\Home\Components\Carrossel\Default.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\Components\Categorias\Default.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\_BuscaProdutos.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\_NavegacaoCarrossel.cshtml" />
