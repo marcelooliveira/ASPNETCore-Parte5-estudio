@@ -32,6 +32,7 @@
     <Compile Include="Areas\Catalogo\ViewComponents\CarrosselPaginaViewComponent.cs" />
     <Compile Include="Areas\Catalogo\ViewComponents\CarrosselViewComponent.cs" />
     <Compile Include="Areas\Catalogo\ViewComponents\CategoriasViewComponent.cs" />
+    <Compile Include="Areas\Catalogo\ViewComponents\ProdutoCardViewComponent.cs" />
     <Compile Include="Areas\Identity\Data\AppIdentityContext.cs" />
     <Compile Include="Areas\Identity\Data\AppIdentityUser.cs" />
     <Compile Include="Areas\Identity\IdentityHostingStartup.cs" />
@@ -86,6 +87,7 @@
     <None Include="Areas\Catalogo\Views\Home\Components\CarrosselPagina\Default.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\Components\Carrossel\Default.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\Components\Categorias\Default.cshtml" />
+    <None Include="Areas\Catalogo\Views\Home\Components\ProdutoCard\Default.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\_BuscaProdutos.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\_NavegacaoCarrossel.cshtml" />
     <None Include="Areas\Catalogo\Views\Home\_ProdutoCard.cshtml" />

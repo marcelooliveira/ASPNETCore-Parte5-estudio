@@ -6,7 +6,7 @@
     <div class="row">
         @foreach (var produto in Model.Produtos)
         {
-            <partial name="_ProdutoCard" model="@produto" />
+            <vc:produto-card produto="@produto"/>
         }
     </div>
 </div>
