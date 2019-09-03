@@ -12,19 +12,7 @@
     <div class="carousel-inner" role="listbox">
         @for (int pagina = 0; pagina < Model.NumPaginas; pagina++)
         {
-
-            <div class="item @(pagina == 0 ? "active" : "")">
-                <div class="row">
-                    @{
-                        var produtosDaPagina = Model.Produtos.Skip(pagina * Model.TamanhoPagina).Take(Model.TamanhoPagina);
-                    }
-                    @foreach (var produto in produtosDaPagina)
-                    {
-                        <partial name="_ProdutoCard" model="@produto" />
-                    }
-                </div>
-            </div>
-
+            <vc:carrossel-pagina indice-pagina="@pagina" produtos-na-categoria="@Model.Produtos" tamanho-pagina="@Model.TamanhoPagina"/>
         }
     </div>
     <!-- Controls -->
