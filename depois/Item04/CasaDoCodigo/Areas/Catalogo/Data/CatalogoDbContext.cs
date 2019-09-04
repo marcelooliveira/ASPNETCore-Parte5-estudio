@@ -29,11 +29,22 @@ namespace CasaDoCodigo.Areas.Catalogo.Data
             modelBuilder.Entity<Categoria>(b =>
             {
                 b.HasKey(t => t.Id);
+                b.HasData(categorias); //propagação ou "seeding"
             });
 
             modelBuilder.Entity<Produto>(b =>
             {
                 b.HasKey(t => t.Id);
+                b.HasData(produtos
+                    .Select(p =>
+                    new
+                    {
+                        p.Id,
+                        p.Codigo,
+                        p.Nome,
+                        p.Preco,
+                        CategoriaId = p.Categoria.Id
+                    }));
             });
         }
 

@@ -27,6 +27,9 @@
     <Compile Include="Areas\Carrinho\Controllers\HomeController.cs" />
     <Compile Include="Areas\Catalogo\Controllers\HomeController.cs" />
     <Compile Include="Areas\Catalogo\Data\CatalogoDbContext.cs" />
+    <Compile Include="Areas\Catalogo\Data\Migrations\20190904185019_AreaCatalogo.cs" />
+    <Compile Include="Areas\Catalogo\Data\Migrations\20190904185019_AreaCatalogo.Designer.cs" />
+    <Compile Include="Areas\Catalogo\Data\Migrations\CatalogoDbContextModelSnapshot.cs" />
     <Compile Include="Areas\Catalogo\Models\ViewModels\CarrosselPaginaViewModel.cs" />
     <Compile Include="Areas\Catalogo\Models\ViewModels\CarrosselViewModel.cs" />
     <Compile Include="Areas\Catalogo\Models\ViewModels\CategoriasViewModel.cs" />
