@@ -16,7 +16,7 @@ namespace CasaDoCodigo.Areas.Catalogo.Data
     //Update-Database -verbose -Context CatalogoDbContext
     public class CatalogoDbContext : DbContext
     {
-        public CatalogoDbContext(DbContextOptions options)
+        public CatalogoDbContext(DbContextOptions<CatalogoDbContext> options)
             : base(options)
         {
 

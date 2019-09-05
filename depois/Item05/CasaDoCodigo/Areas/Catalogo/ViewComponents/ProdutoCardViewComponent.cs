@@ -1,4 +1,4 @@
-﻿using CasaDoCodigo.Models;
+﻿using CasaDoCodigo.Areas.Catalogo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
