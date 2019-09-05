@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CasaDoCodigo.Data
 {
+    //PARA CRIAR UMA MIGRAÇÃO:
+    //Add-Migration "ModeloSemProduto" -Context ApplicationDbContext
+    //PARA EXECUTAR A MIGRAÇÃO:
+    //Update-Database -verbose -Context ApplicationDbContext
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
