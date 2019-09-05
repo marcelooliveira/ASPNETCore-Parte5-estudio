@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CasaDoCodigo.Areas.Catalogo.Models
+namespace CasaDoCodigo.Models
 {
     public class Produto : BaseModel
     {

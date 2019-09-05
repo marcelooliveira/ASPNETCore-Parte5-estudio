@@ -12,10 +12,7 @@ namespace CasaDoCodigo.Models
         public Pedido Pedido { get; private set; }
         [Required]
         [DataMember]
-        public string ProdutoCodigo { get; private set; }
-        [Required]
-        [DataMember]
-        public string ProdutoNome { get; private set; }
+        public Produto Produto { get; private set; }
         [Required]
         [DataMember]
         public int Quantidade { get; private set; }
@@ -32,11 +29,10 @@ namespace CasaDoCodigo.Models
 
         }
 
-        public ItemPedido(Pedido pedido, string produtoCodigo, string produtoNome, int quantidade, decimal precoUnitario)
+        public ItemPedido(Pedido pedido, Produto produto, int quantidade, decimal precoUnitario)
         {
             Pedido = pedido;
-            ProdutoCodigo = produtoCodigo;
-            ProdutoNome = produtoNome;
+            Produto = produto;
             Quantidade = quantidade;
             PrecoUnitario = precoUnitario;
         }

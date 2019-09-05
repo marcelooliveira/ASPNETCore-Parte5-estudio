@@ -1,5 +1,5 @@
 ﻿using CasaDoCodigo.Areas.Catalogo.Models.ViewModels;
-using CasaDoCodigo.Areas.Catalogo.Models;
+using CasaDoCodigo.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
