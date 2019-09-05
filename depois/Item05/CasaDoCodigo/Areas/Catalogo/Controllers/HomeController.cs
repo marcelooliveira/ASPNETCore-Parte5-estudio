@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CasaDoCodigo.Repositories;
+using CasaDoCodigo.Areas.Catalogo.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CasaDoCodigo.MVC.Areas.Catalogo.Controllers

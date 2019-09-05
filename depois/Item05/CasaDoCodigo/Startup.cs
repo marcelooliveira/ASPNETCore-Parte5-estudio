@@ -50,7 +50,10 @@ namespace CasaDoCodigo
             services.AddTransient<IDataService, DataService>();
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IHttpHelper, HttpHelper>();
-            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+
+            services.AddTransient<CasaDoCodigo.Repositories.IProdutoRepository, CasaDoCodigo.Repositories.ProdutoRepository>();
+            services.AddTransient<CasaDoCodigo.Areas.Catalogo.Data.Repositories.IProdutoRepository, CasaDoCodigo.Areas.Catalogo.Data.Repositories.ProdutoRepository>();
+
             services.AddTransient<IPedidoRepository, PedidoRepository>();
             services.AddTransient<ICadastroRepository, CadastroRepository>();
         }
