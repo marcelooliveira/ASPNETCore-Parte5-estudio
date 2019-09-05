@@ -34,7 +34,7 @@ namespace CasaDoCodigo.Areas.Carrinho.Controllers
             return base.View(carrinhoViewModel);
         }
 
-        [HttpPost]
+        [HttpPut]
         [ValidateAntiForgeryToken]
         [Authorize]
         public async Task<UpdateQuantidadeResponse> UpdateQuantidade([FromBody]ItemPedido itemPedido)

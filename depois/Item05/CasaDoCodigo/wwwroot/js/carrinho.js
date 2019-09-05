@@ -36,7 +36,7 @@ class Carrinho {
         headers['RequestVerificationToken'] = token;
 
         $.ajax({
-            url: '/pedido/updatequantidade',
+            url: '/carrinho/home/updatequantidade',
             type: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify(data),
