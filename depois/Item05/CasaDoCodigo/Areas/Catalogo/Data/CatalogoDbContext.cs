@@ -1,12 +1,10 @@
-﻿using CasaDoCodigo.Models;
-using CasaDoCodigo.Repositories;
+﻿using CasaDoCodigo.Areas.Catalogo.Models;
+using CasaDoCodigo.Areas.Catalogo.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CasaDoCodigo.Areas.Catalogo.Data
 {

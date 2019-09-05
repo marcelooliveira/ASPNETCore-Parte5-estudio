@@ -1,18 +1,19 @@
 ﻿using CasaDoCodigo.Data;
-using CasaDoCodigo.Models;
-using CasaDoCodigo.Models.ViewModels;
+using CasaDoCodigo.Areas.Catalogo.Models;
+using CasaDoCodigo.Areas.Catalogo.Models.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CasaDoCodigo.Repositories
+namespace CasaDoCodigo.Areas.Catalogo.Data.Repositories
 {
     public interface IProdutoRepository
     {
         Task SaveProdutosAsync(List<Livro> livros);
         Task<IList<Produto>> GetProdutosAsync();
+        Task<Produto> GetProdutoAsync(string codigo);
         Task<BuscaProdutosViewModel> GetProdutosAsync(string pesquisa);
     }
 
@@ -20,7 +21,7 @@ namespace CasaDoCodigo.Repositories
     {
         static List<Produto> listaProdutos;
         public ProdutoRepository(IConfiguration configuration,
-            ApplicationDbContext contexto) : base(configuration, contexto)
+            CatalogoDbContext contexto) : base(configuration, contexto)
         {
         }
 
@@ -29,6 +30,14 @@ namespace CasaDoCodigo.Repositories
             return await dbSet
                 .Include(prod => prod.Categoria)
                 .ToListAsync();
+        }
+
+        public async Task<Produto> GetProdutoAsync(string codigo)
+        {
+            return await dbSet
+                .Where(p => p.Codigo == codigo)
+                .Include(prod => prod.Categoria)
+                .SingleOrDefaultAsync();
         }
 
         public async Task<BuscaProdutosViewModel> GetProdutosAsync(string pesquisa)

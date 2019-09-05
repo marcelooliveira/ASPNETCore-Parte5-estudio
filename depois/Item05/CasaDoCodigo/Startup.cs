@@ -1,4 +1,5 @@
 ﻿using CasaDoCodigo.Areas.Catalogo.Data;
+using CasaDoCodigo.Areas.Catalogo.Data.Repositories;
 using CasaDoCodigo.Data;
 using CasaDoCodigo.Repositories;
 using Microsoft.AspNetCore.Builder;

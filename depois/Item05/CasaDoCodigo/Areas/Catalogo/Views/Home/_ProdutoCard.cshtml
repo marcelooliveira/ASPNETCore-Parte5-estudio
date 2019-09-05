@@ -8,7 +8,7 @@
             <div class="produto-nome">@Model.Nome</div>
             <div><h4><strong>R$ @Model.Preco</strong></h4></div>
             <div class="text-center">
-                <a asp-area="" asp-controller="pedido" asp-action="carrinho"
+                <a asp-area="catalogo" asp-controller="home" asp-action="index"
                    asp-route-codigo="@Model.Codigo"
                    class="btn btn-success">Adicionar</a>
             </div>

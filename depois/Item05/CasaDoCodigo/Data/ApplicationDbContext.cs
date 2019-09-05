@@ -13,16 +13,6 @@ namespace CasaDoCodigo.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Categoria>(builder =>
-            {
-                builder.HasKey(t => t.Id);
-            });
-
-            modelBuilder.Entity<Produto>(builder =>
-            {
-                builder.HasKey(t => t.Id);   
-            });
-
             modelBuilder.Entity<Pedido>(builder =>
             {
                 builder.HasKey(t => t.Id);
@@ -36,7 +26,6 @@ namespace CasaDoCodigo.Data
             {
                 builder.HasKey(t => t.Id);
                 builder.HasOne(t => t.Pedido);
-                builder.HasOne(t => t.Produto);
             });
         }
     }

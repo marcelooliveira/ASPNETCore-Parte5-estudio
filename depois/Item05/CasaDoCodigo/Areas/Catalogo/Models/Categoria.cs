@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CasaDoCodigo.Models
+namespace CasaDoCodigo.Areas.Catalogo.Models
 {
     public class Categoria : BaseModel
     {
