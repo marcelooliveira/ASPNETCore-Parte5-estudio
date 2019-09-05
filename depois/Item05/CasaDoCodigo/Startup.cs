@@ -48,7 +48,6 @@ namespace CasaDoCodigo
         /// </summary>
         private static void ConfigurarDI(IServiceCollection services)
         {
-            services.AddTransient<IDataService, DataService>();
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IHttpHelper, HttpHelper>();
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
@@ -83,6 +82,9 @@ namespace CasaDoCodigo
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            MigrarBanco<ApplicationDbContext>(app);
+            MigrarBanco<CatalogoDbContext>(app);
+
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseSession();
@@ -113,9 +115,19 @@ namespace CasaDoCodigo
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{codigo?}");
             });
+        }
 
-            var dataService = serviceProvider.GetRequiredService<IDataService>();
-            dataService.InicializaDBAsync(serviceProvider).Wait();
+        private static void MigrarBanco<T>(IApplicationBuilder app) where T: DbContext
+        {
+            using (var seviceScope = app.ApplicationServices
+                .GetRequiredService<IServiceScopeFactory>()
+                .CreateScope())
+            {
+                using (var contexto = seviceScope.ServiceProvider.GetService<T>())
+                {
+                    contexto.Database.Migrate();
+                }
+            }
         }
     }
 }
