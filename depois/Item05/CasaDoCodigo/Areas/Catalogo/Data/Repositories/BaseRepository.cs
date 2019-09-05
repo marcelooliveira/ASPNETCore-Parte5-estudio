@@ -1,5 +1,5 @@
 ﻿using CasaDoCodigo.Data;
-using CasaDoCodigo.Models;
+using CasaDoCodigo.Areas.Catalogo.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -12,7 +12,7 @@ namespace CasaDoCodigo.Areas.Catalogo.Data.Repositories
         protected readonly DbSet<T> dbSet;
 
         public BaseRepository(IConfiguration configuration,
-            ApplicationDbContext contexto)
+            CatalogoDbContext contexto)
         {
             this.configuration = configuration;
             this.contexto = contexto;

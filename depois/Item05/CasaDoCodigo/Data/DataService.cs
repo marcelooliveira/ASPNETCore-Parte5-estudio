@@ -22,16 +22,6 @@ namespace CasaDoCodigo.Data
             var contexto = provider.GetService<ApplicationDbContext>();
 
             await contexto.Database.MigrateAsync();
-
-            if (await contexto.Set<Produto>().AnyAsync())
-            {
-                return;
-            }
-
-            List<Livro> livros = await GetLivrosAsync();
-
-            var produtoRepository = provider.GetService<IProdutoRepository>();
-            await produtoRepository.SaveProdutosAsync(livros);
         }
 
         private async Task<List<Livro>> GetLivrosAsync()
